@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+  rel="stylesheet"
+  href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+  integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script
+  src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+  integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+  crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3f25439984.js"></script>
+    <title>تسوق معي</title>
+    <style>
+        .jumbotronHeader{
+            height: 100vh;
+            /* background: rgb(2,0,36); */
+            /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,57,62,1) 15%, rgba(14,11,11,0.9500175070028011) 80%); */
+            /* background: url('./images/web'); */
+            background-image: url('./images/web.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            position: relative;
+        }
+        .jumbotronHeader::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        }
+        .intro{
+          width: 100%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+         z-index: 1;
+        }
+        .card-body{
+          height: 30vh;
+        }
+        .carousel{
+            height: 40vh;
+            /* background: */
+            /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,57,62,1) 15%, rgba(14,11,11,0.9500175070028011) 80%); */
+        }
+        .jumbotronfooter{
+          background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,57,62,1) 15%, rgba(14,11,11,0.9500175070028011) 80%);
+        }
+        .bg{
+          background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,57,62,1) 15%, rgba(14,11,11,0.9500175070028011) 80%);
+        }
+        /* .card-body{
+          background-color:transparent
+        } */
+        .imagesMans{
+          background-image:url('./images/mans.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size:cover;
+        }
+        .imagesFood{
+          background-image:url('./images/food.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover
+        }
+        .imagesPhones{
+          background-image:url('./images/phonesImages.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover
+        }
+        .imagesChildren{
+          background-image:url('./images/childrenimages.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover
+        }
+        .images{
+          background-image:url('./images/images.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain
+        }
+        .lapImages{
+          background-image:url('./images/lapImages.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover
+        }
+        .wImages{
+          background-image:url('./images/wimahes.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain
+        }
+        .printersImages{
+          background-image:url('./images/printers.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">تسوق معي</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">الرئسية<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#categories">الاقسام</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#products"> <span class="badge badge-danger">جديد</span> اخر المنتجات</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#serves">خدماتنا</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">تواصل معنا</a>
+                      </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              الاقسام الاخرئ
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">الكتب</a>
+                              <a class="dropdown-item" href="#">سيارات</a>
+                            </div>
+                          </li> -->
+                      </ul>
+                      <div class="mr-2">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <form class="form-inline my-2 my-lg-0">
+                        <div class="form-group">
+                          <input class="form-control mr-sm-2" style="outline: none;" type="search" placeholder="بحث عن منتج" aria-label="Search">
+                        </div>
+                      </form>
+                      <form class="form-inline my-2 my-lg-0">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-outline-primary sm-mb-2">تسجيل الدخول</button>
+                        </div>
+                      </form>
+                  </div>
+            </div>
+        </nav>
+    </header>
+        <div class="jumbotron jumbotron-fluid jumbotronHeader">
+            <div class="container text-center text-white intro">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h4 class="display-4">اهلا بك في تسوق معي</h4>
+                    </div>
+                    <div class="col-12">
+                        <p>منتجاتنا جيده وقابله لشراء</p>
+                    </div>
+                    <div class="col-12">
+                        <p>ندعم جميع عمليات الدفع</p>
+                    </div>
+                    <!-- <div class="col-12">
+                        <button type="button" class="btn btn-outline-primary btn-lg sm-mb-2">تصفح المنتجات</button>
+                        <button type="button" class="btn btn-outline-success btn-lg">تسجيل الدخول</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pt-4">
+             <h4 class="text-center pb-5 fade show" id="categories">تسوق من خلال الاقسام</h4>
+           <div class="row" data-aos="fade-up" data-aos-duration="2000">
+               <div class="col-md-6 col-lg-4 col-sm-12">
+                   <div class="card border-light mb-5 shadow rounded">
+                    <div class="card-header">ملابس رجاليه</div>
+                    <div class="card-body imagesMans bg-none">
+                    </div>
+                   </div>
+               </div>
+
+               <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">اطعمه</div>
+                 <div class="card-body imagesFood">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">ملابس اطفال</div>
+                 <div class="card-body imagesChildren">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">هواتف</div>
+                 <div class="card-body imagesPhones">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">ادوات مكتبيه</div>
+                 <div class="card-body images">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">طابعات</div>
+                 <div class="card-body printersImages">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">لابتوبات</div>
+                 <div class="card-body lapImages">
+                  
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">ساعات</div>
+                 <div class="card-body wImages">
+                  
+                 </div>
+                </div>
+            </div>
+
+           </div>
+           <a href="#" class="text-dark" style="text-decoration: none;"><h5 class="text-center">المزيد <i class="fas fa-eye"></i></h5></a>
+        </div>
+
+
+    <div class="container" id="products">
+      <div class="row">
+        <div class="col-lg-7 m-3"><h4>اخر المنتجات</h4></div>
+        <div class="col-lg-5 mb-5">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active text-dark" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">الكل</a>
+              <a class="nav-item nav-link text-dark" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">جديد</a>
+              <a class="nav-item nav-link text-dark" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">لطلب المسبق</a>
+            </div>
+          </nav>
+        </div>
+        </div>
+        <div class="tab-content" data-aos="fade-up" data-aos-duration="2000">
+          <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row">
+
+              <div class="col-md-6 col-lg-3 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">ساعه</div>
+                 <div class="card-body wImages"></div>
+                  <div class="card-footer">
+                      <p class="text-success">500 ريال</p>
+                  </div>
+                </div>
+                </div> 
+                
+                <div class="col-md-6 col-lg-3 col-sm-12">
+                  <div class="card border-light mb-5 shadow rounded">
+                   <div class="card-header">لابتوب</div>
+                   <div class="card-body lapImages"></div>
+                   <div class="card-footer">
+                    <p class="text-success">1000 ريال</p>
+                     </div>  
+                  </div>
+              </div>
+
+          </div>
+          </div>
+
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="row">
+              <div class="col-md-6 col-lg-3 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">لابتوبات</div>
+                 <div class="card-body lapImages"></div>
+                 <div class="card-footer">
+                  <p class="text-success">1000 ريال</p>
+                   </div> 
+                </div>
+            </div> 
+          </div>
+          </div>
+
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="row">
+              <div class="col-md-6 col-lg-3 col-sm-12">
+                <div class="card border-light mb-5 shadow rounded">
+                 <div class="card-header">لابتوبات</div>
+                 <div class="card-body lapImages"></div>
+                 <div class="card-footer">
+                  <p class="text-success">1000 ريال</p>
+                   </div> 
+                </div>
+            </div> 
+          </div>
+          </div>
+
+        </div>
+
+        <a href="#" class="text-dark" style="text-decoration: none;"><h5 class="text-center">تصفح المزيد من المنتجات <i class="fas fa-eye"></i></h5></a>
+
+      </div>
+      
+      <div class="container pt-5 pb-5" id="serves">
+        <h4 class="mb-5">خدماتنا</h4>
+        <div class="row justify-content-around">
+           <div class="col-md-3 col-lg-3 col-sm-12 text-center mb-5">
+            
+            <div class="pb-3">
+              <i class="fas fa-money-bill-wave fa-2x"></i>
+             </div>
+            <div class=""> <h6>الدفع بجميع الطرق</h6></div>
+           </div>
+
+           <div class="col-md-3 col-lg-3 col-sm-12 text-center mb-5">
+
+            <div  class="pb-3">
+              <i class="fas fa-shopping-cart fa-2x"></i>
+             </div>
+            <div class=""> <h6>توصيل مجاني</h6></div>
+
+           </div>
+
+
+           <div class="col-md-3 col-lg-3 col-sm-12 text-center mb-5">
+
+            <div  class="pb-3">
+              <i class="fas fa-people-arrows fa-2x"></i>
+             </div>
+            <div class=""> <h6>فريق دعم 24 ساعه</h6></div>
+
+           </div>
+        </div>
+      </div>
+
+
+      <div class="container mb-5 mt-5">
+        <h4 class="text-center mb-5">الاراء</h4>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-10 text-center">
+                    <div id="carouselExampleControls" class="carousel slide pt-5" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                                <p class="text-dark">التوصيل جدا سريع واسعارهم جميله</p>
+                                <h6 class="text-dark">Ahmad</h6>
+                          </div>
+                          <div class="carousel-item text-dark">
+                            <p class="">انصح بهم</p>
+                            <h6 class="">Ali</h6>
+                          </div>
+                          <div class="carousel-item text-dark">
+                            <p class="">خدمتهم ممتازه</p>
+                            <h6 class="">Abdullah</h6>
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <!-- <span class="sr-only">Previous</span>
+                          <span class="sr-only">Previous</span> -->
+                          <!-- <i class="fas fa-arrow-right sr-only">Previous</i> -->
+                           <i class="fas fa-angle-double-right fa-2x"style="color: black"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                          <!-- <i class="fas fa-arrow-right bg-danger text-white"></i> -->
+                          <i class="fas fa-angle-double-left fa-2x" style="color: black"></i>
+                        </a>
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="bg-light" id='contact-us'>
+        <div class="container  p-5">
+            <div class="row justify-content-between">
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <h4 class="text-dark"> لتواصل معنا</h4>
+                 <div class="">
+                   <form action="" method="post">
+                    <div class="form-group">
+                      <label class="text-dark" for="exampleInputName">الاسم</label>
+                      <input type="text" class="form-control" id="exampleInputName">
+                     </div>
+                     <div class="form-group">
+                      <label class="text-dark" for="exampleInputEmail1">الايميل</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                     </div>
+                     <div class="form-group">
+                      <label for="exampleFormControlTextarea1">المحتوى</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                     <button type="submit" class="btn btn-primary">ارسال</button>
+                   </form>
+                 </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <h4 class="text-dark pb-2 mt-2-sm">مقرنا</h4>
+                 <!-- <div class="bg"></div> -->
+                 <div>
+                    <!-- <img src="./images/food.jpg" class="img-fluid" alt="" srcset=""> -->
+                    <iframe class="col-12" style="height: 40vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463876.93970435776!2d47.10272102442594!3d24.72555534712373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNix2YrYp9i2!5e0!3m2!1sar!2ssa!4v1586621853253!5m2!1sar!2ssa" 
+                     frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                 </div>
+              </div>
+            </div>
+        </div>
+         
+
+      <div class="jumbotron jumbotron-fluid jumbotronfooter page-footer m-0 pt-3 py-2">
+          <footer class="container">
+            <div class="row d-flex justify-content-around align-items-center text-center pt-3">
+               <div class="col-lg-3 col-md-3 col-sm-12">
+                <i class="fab fa-twitter text-white fa-2x mb-2"></i>
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-12">
+                <i class="fab fa-facebook-f  text-white fa-2x mb-2"></i>
+              </div>
+               <div class="col-lg-3 col-md-3 col-sm-12">
+                <i class="fab fa-instagram  text-white fa-2x mb-2"></i>
+              </div>
+               <div class="col-lg-3 col-md-3 col-sm-12">
+                <i class="fab fa-linkedin-in  text-white fa-2x mb-2"></i>
+              </div>
+            </div>
+            <div class="footer-copyright text-center text-white pt-2">© 2020 Copyright</div>
+          </footer>
+      </div>
+</div> 
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+    {
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+}
+  );
+</script>
+</html>
