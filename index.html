@@ -27,8 +27,9 @@
             background-color: #fff;
             /* background-size:cover; */
             position: relative;
+            
         }
-        .jumbotronHeader::after{
+        /* .jumbotronHeader::after{
           content: "";
           position: absolute;
           top: 0;
@@ -36,11 +37,16 @@
           left: 0;
           bottom: 0;
           background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+        } */
+        .textIntro{
+          color: black;
+          font-size: 3em;
+          font-weight: 400;
         }
         .intro{
           width: 100%;
           position: relative;
-          top: 50%;
+          top: 40%;
           transform: translateY(-50%);
          z-index: 1;
         }
@@ -170,14 +176,11 @@
             <div class="container text-center text-white intro">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h4 class="display-4">اهلا بك في تسوق معي</h4>
+                        <h4 class="display-4 textIntro">اهلا بك في تسوق معي</h4>
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12 textIntro">
                         <p>منتجاتنا جيده وقابله لشراء</p>
-                    </div>
-                    <div class="col-12">
-                        <p>ندعم جميع عمليات الدفع</p>
-                    </div>
+                    </div> -->
                     <!-- <div class="col-12">
                         <button type="button" class="btn btn-outline-primary btn-lg sm-mb-2">تصفح المنتجات</button>
                         <button type="button" class="btn btn-outline-success btn-lg">تسجيل الدخول</button>
@@ -466,6 +469,25 @@
 </div> 
 
 </body>
+<script>
+  ( () => {
+  'use strict';
+  // Page is loaded
+  const objects = document.getElementsByClassName('asyncImage');
+  Array.from(objects).map((item) => {
+    // Start loading image
+    const img = new Image();
+    img.src = item.dataset.src;
+    // Once image is loaded replace the src of the HTML element
+    img.onload = () => {
+      item.classList.remove('asyncImage');
+      return item.nodeName === 'IMG' ? 
+        item.src = item.dataset.src :        
+        item.style.backgroundImage = `url(${item.dataset.src})`;
+    };
+  });
+})();
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
